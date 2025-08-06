@@ -2,4 +2,3 @@
 Thực hiện đồ án cuối kỳ môn Kỹ năng nghề nghiệp - game snake
 test
 Viviane check
-A
