@@ -27,6 +27,7 @@ git checkout -b feature/your-feature-name
 ```
 Examples:
 >feature/new-difficulty-level
+
 >fix/score-display-bug
 
 ### 4. Code Style Guidelines
