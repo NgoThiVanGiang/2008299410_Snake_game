@@ -1,0 +1,18 @@
+CXX = g++
+CXXFLAGS = -Wall -Wextra -std=c++11
+TARGET = snake_game
+SRCS = main.cpp SnakeGame.cpp
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) $(OBJS) -o $(TARGET)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	del *.o $(TARGET).exe
+
+.PHONY: all clean
