@@ -1,4 +1,4 @@
-// #include "SnakeGame.h"
+#include "SnakeGame.h"
 #include <iostream>
 #include <windows.h>
 #include <conio.h>
@@ -11,6 +11,16 @@ SnakeGame::SnakeGame() {
     console_handle = GetStdHandle(STD_OUTPUT_HANDLE);
     hideCursor();
     initGame();
+}
+
+void SnakeGame::initGame() {
+    snake.clear();
+    snake.push_back(Point(WIDTH/2, HEIGHT/2));
+    generateFood();
+    score = 0;
+    game_over = false;
+    direction = 'R';  // Start moving right
+    selectDifficulty();
 }
 
 void SnakeGame::updateGame() {
@@ -45,4 +55,65 @@ void SnakeGame::updateGame() {
     } else {
         snake.pop_back();
     }
+}
+
+void SnakeGame::gameOverScreen() {
+    system("cls");
+    setColor(12); // Red
+    cout << "\n\n\t\t=== GAME OVER ===\n\n";
+
+    setColor(14); // Yellow
+    cout << "\tFinal Score: " << score << "\n";
+    cout << "\tSnake Length: " << snake.size() << "\n";
+    cout << "\tDifficulty: ";
+    switch(difficulty) {
+        case 1: cout << "Easy"; break;
+        case 2: cout << "Medium"; break;
+        case 3: cout << "Hard"; break;
+    }
+    cout << "\n\n";
+
+    setColor(15); // White
+    cout << "\tPress R to restart or Q to quit: ";
+
+    char choice;
+    do {
+        choice = toupper(_getch());
+    } while (choice != 'R' && choice != 'Q');
+
+    if (choice == 'R') {
+        initGame();
+    } else {
+        exit(0);
+    }
+}
+
+void SnakeGame::run() {
+    srand((unsigned)time(0));
+    while (true) {
+        if (!game_over) {
+            handleInput();
+            updateGame();
+            drawGame();
+            Sleep(speed_delay);
+        } else {
+            gameOverScreen();
+        }
+    }
+}
+
+void SnakeGame::setColor(int color) {
+    SetConsoleTextAttribute(console_handle, color);
+}
+
+void SnakeGame::gotoxy(int x, int y) {
+    COORD coord = {short(x), short(y)};
+    SetConsoleCursorPosition(console_handle, coord);
+}
+
+void SnakeGame::hideCursor() {
+    CONSOLE_CURSOR_INFO cursorInfo;
+    GetConsoleCursorInfo(console_handle, &cursorInfo);
+    cursorInfo.bVisible = false;
+    SetConsoleCursorInfo(console_handle, &cursorInfo);
 }
