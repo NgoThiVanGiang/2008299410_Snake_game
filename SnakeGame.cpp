@@ -88,6 +88,20 @@ void SnakeGame::gameOverScreen() {
     }
 }
 
+void SnakeGame::run() {
+    srand((unsigned)time(0));
+    while (true) {
+        if (!game_over) {
+            handleInput();
+            updateGame();
+            drawGame();
+            Sleep(speed_delay);
+        } else {
+            gameOverScreen();
+        }
+    }
+}
+
 void SnakeGame::setColor(int color) {
     SetConsoleTextAttribute(console_handle, color);
 }
