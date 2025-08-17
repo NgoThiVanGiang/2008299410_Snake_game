@@ -57,12 +57,13 @@ void SnakeGame::updateGame() {
     }
 }
 
+// Display the "Game Over" screen and handle restart/quit choice
 void SnakeGame::gameOverScreen() {
     system("cls");
     setColor(12); // Red
     cout << "\n\n\t\t=== GAME OVER ===\n\n";
 
-    setColor(14); // Yellow
+    setColor(14); // Set text color to yellow
     cout << "\tFinal Score: " << score << "\n";
     cout << "\tSnake Length: " << snake.size() << "\n";
     cout << "\tDifficulty: ";
@@ -78,16 +79,17 @@ void SnakeGame::gameOverScreen() {
 
     char choice;
     do {
-        choice = toupper(_getch());
+        choice = toupper(_getch()); // Capture key without requiring Enter, convert to uppercase
     } while (choice != 'R' && choice != 'Q');
 
     if (choice == 'R') {
-        initGame();
+        initGame();  // Restart the game
     } else {
-        exit(0);
+        exit(0);     // Quit the program
     }
 }
 
+// Main game loop
 void SnakeGame::run() {
     srand((unsigned)time(0));
     while (true) {
@@ -102,18 +104,21 @@ void SnakeGame::run() {
     }
 }
 
+// Change console text color
 void SnakeGame::setColor(int color) {
     SetConsoleTextAttribute(console_handle, color);
 }
 
+// Move console cursor to (x, y) position
 void SnakeGame::gotoxy(int x, int y) {
     COORD coord = {short(x), short(y)};
     SetConsoleCursorPosition(console_handle, coord);
 }
 
+// Hide the blinking console cursor (for a cleaner game display)
 void SnakeGame::hideCursor() {
     CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(console_handle, &cursorInfo);
-    cursorInfo.bVisible = false;
-    SetConsoleCursorInfo(console_handle, &cursorInfo);
+    GetConsoleCursorInfo(console_handle, &cursorInfo); // Get current cursor info
+    cursorInfo.bVisible = false; // Set visibility to false
+    SetConsoleCursorInfo(console_handle, &cursorInfo); // Apply changes
 }
