@@ -57,12 +57,13 @@ void SnakeGame::updateGame() {
     }
 }
 
+// Display the "Game Over" screen and handle restart/quit choice
 void SnakeGame::gameOverScreen() {
     system("cls");
     setColor(12); // Red
     cout << "\n\n\t\t=== GAME OVER ===\n\n";
 
-    setColor(14); // Yellow
+    setColor(14); // Set text color to yellow
     cout << "\tFinal Score: " << score << "\n";
     cout << "\tSnake Length: " << snake.size() << "\n";
     cout << "\tDifficulty: ";
@@ -78,13 +79,13 @@ void SnakeGame::gameOverScreen() {
 
     char choice;
     do {
-        choice = toupper(_getch());
+        choice = toupper(_getch()); // Capture key without requiring Enter, convert to uppercase
     } while (choice != 'R' && choice != 'Q');
 
     if (choice == 'R') {
-        initGame();
+        initGame();  // Restart the game
     } else {
-        exit(0);
+        exit(0);     // Quit the program
     }
 }
 
