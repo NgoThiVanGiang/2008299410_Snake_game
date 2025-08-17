@@ -15,7 +15,7 @@ We follow the **Conventional Commits** standard to keep commit history clear and
 - `ci`: Changes to CI/CD configuration files or scripts  
 
 **Examples:**
-- `feat: add new difficulty level "Insane"`  
+- `feature: add new difficulty level "Insane"`  
 - `fix: correct score reset bug on restart`  
 - `docs: update README with setup instructions`  
 
