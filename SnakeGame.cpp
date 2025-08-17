@@ -87,3 +87,19 @@ void SnakeGame::gameOverScreen() {
         exit(0);
     }
 }
+
+void SnakeGame::setColor(int color) {
+    SetConsoleTextAttribute(console_handle, color);
+}
+
+void SnakeGame::gotoxy(int x, int y) {
+    COORD coord = {short(x), short(y)};
+    SetConsoleCursorPosition(console_handle, coord);
+}
+
+void SnakeGame::hideCursor() {
+    CONSOLE_CURSOR_INFO cursorInfo;
+    GetConsoleCursorInfo(console_handle, &cursorInfo);
+    cursorInfo.bVisible = false;
+    SetConsoleCursorInfo(console_handle, &cursorInfo);
+}
