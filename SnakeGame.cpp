@@ -1,4 +1,4 @@
-// #include "SnakeGame.h"
+#include "SnakeGame.h"
 #include <iostream>
 #include <windows.h>
 #include <conio.h>
