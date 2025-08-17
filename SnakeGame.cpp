@@ -56,3 +56,34 @@ void SnakeGame::updateGame() {
         snake.pop_back();
     }
 }
+
+void SnakeGame::gameOverScreen() {
+    system("cls");
+    setColor(12); // Red
+    cout << "\n\n\t\t=== GAME OVER ===\n\n";
+
+    setColor(14); // Yellow
+    cout << "\tFinal Score: " << score << "\n";
+    cout << "\tSnake Length: " << snake.size() << "\n";
+    cout << "\tDifficulty: ";
+    switch(difficulty) {
+        case 1: cout << "Easy"; break;
+        case 2: cout << "Medium"; break;
+        case 3: cout << "Hard"; break;
+    }
+    cout << "\n\n";
+
+    setColor(15); // White
+    cout << "\tPress R to restart or Q to quit: ";
+
+    char choice;
+    do {
+        choice = toupper(_getch());
+    } while (choice != 'R' && choice != 'Q');
+
+    if (choice == 'R') {
+        initGame();
+    } else {
+        exit(0);
+    }
+}
