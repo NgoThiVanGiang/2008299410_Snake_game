@@ -20,6 +20,13 @@ A classic Snake game implemented in C++ with modular code structure.
 - 📦 Modular code structure for easy maintenance
 - 🎨 Colorful console interface
 
+## 🎮 Controls
+
+- ⬆️ / ⬇️ / ⬅️ / ➡️  → Move the snake (Arrow keys)  
+- **W / A / S / D** → Alternative movement keys  
+- **R** → Restart the game after Game Over  
+- **Q** → Quit the game after Game Over  
+
 ## 🧱 Code Structure
 
 - `main.cpp`: Entry point of the application
