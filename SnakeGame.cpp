@@ -88,6 +88,7 @@ void SnakeGame::gameOverScreen() {
     }
 }
 
+// Main game loop
 void SnakeGame::run() {
     srand((unsigned)time(0));
     while (true) {
@@ -102,18 +103,21 @@ void SnakeGame::run() {
     }
 }
 
+// Change console text color
 void SnakeGame::setColor(int color) {
     SetConsoleTextAttribute(console_handle, color);
 }
 
+// Move console cursor to (x, y) position
 void SnakeGame::gotoxy(int x, int y) {
     COORD coord = {short(x), short(y)};
     SetConsoleCursorPosition(console_handle, coord);
 }
 
+// Hide the blinking console cursor (for a cleaner game display)
 void SnakeGame::hideCursor() {
     CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(console_handle, &cursorInfo);
-    cursorInfo.bVisible = false;
-    SetConsoleCursorInfo(console_handle, &cursorInfo);
+    GetConsoleCursorInfo(console_handle, &cursorInfo); // Get current cursor info
+    cursorInfo.bVisible = false; // Set visibility to false
+    SetConsoleCursorInfo(console_handle, &cursorInfo); // Apply changes
 }
