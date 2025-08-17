@@ -4,7 +4,7 @@
 We follow the **Conventional Commits** standard to keep commit history clear and consistent.  
 
 **Types:**
-- `feat`: A new feature  
+- `feature`: A new feature  
 - `fix`: A bug fix  
 - `chore`: Maintenance tasks (no production code changes)  
 - `docs`: Documentation changes only  
