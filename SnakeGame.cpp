@@ -13,6 +13,16 @@ SnakeGame::SnakeGame() {
     initGame();
 }
 
+void SnakeGame::initGame() {
+    snake.clear();
+    snake.push_back(Point(WIDTH/2, HEIGHT/2));
+    generateFood();
+    score = 0;
+    game_over = false;
+    direction = 'R';  // Start moving right
+    selectDifficulty();
+}
+
 void SnakeGame::updateGame() {
     Point head = snake[0];
 
