@@ -2,6 +2,32 @@
 
 A classic Snake game implemented in C++ with modular code structure.
 
+<!-- Centered avatar -->
+<pre align="center">
+     ____              _       
+  / ___| _ __   __ _| | _____
+  \___ \| '_ \ / _` | |/ / _ \
+   ___) | | | | (_| |   <  __/
+  |____/|_| |_|\__,_|_|\_\___|
+         S N A K E   ++
+</pre>
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_ID/" target="_blank">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-brightgreen?style=flat&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://discord.gg/YOUR_INVITE" target="_blank">
+    <img alt="discord" src="https://img.shields.io/badge/discord-5865F2?style=flat&logo=discord&logoColor=white" />
+  </a>
+  <a href="https://YOUR_CHAT_URL" target="_blank">
+    <img alt="chat" src="https://img.shields.io/badge/chat-brightgreen?style=flat&logo=wechat&logoColor=white" />
+  </a>
+  <a href="https://github.com/NgoThiVanGiang/2008299410_Snake_game/wiki" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/%F0%9F%93%9A%20Documentation-555555?style=flat" />
+  </a>
+</p>
+
+
 ## 🖼️ Screenshots
 
 ### 🟢 Welcome Screen
