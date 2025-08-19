@@ -23,6 +23,13 @@ void SnakeGame::initGame() {
     selectDifficulty();
 }
 
+bool SnakeGame::isSnakeBody(const Point& p) {
+    for (const Point& segment : snake) {
+        if (segment == p) return true;
+    }
+    return false;
+}
+
 void SnakeGame::selectDifficulty() {
     system("cls");
     setColor(14); // Yellow
