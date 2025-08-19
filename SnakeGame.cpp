@@ -53,10 +53,6 @@ void SnakeGame::selectDifficulty() {
     _getch();
 }
 
-void SnakeGame::generateFood() {
-    WIDTH - 2;
-}
-
 void SnakeGame::handleInput() {
     if (_kbhit()) {
         int key = _getch();
