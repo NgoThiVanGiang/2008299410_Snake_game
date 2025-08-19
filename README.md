@@ -53,6 +53,25 @@ A classic Snake game implemented in C++ with modular code structure.
 - **R** → Restart the game after Game Over  
 - **Q** → Quit the game after Game Over  
 
+## Compilation and Running
+
+### Method 1: Using the batch file (Windows)
+```bash
+build_and_run.bat
+```
+
+### Method 2: Manual compilation (Windows)
+```bash
+g++ -Wall -Wextra -std=c++11 main.cpp SnakeGame.cpp -o snake_game.exe
+snake_game.exe
+```
+
+### Method 3: Using Makefile (if you have make installed)
+```bash
+make
+./snake_game.exe
+```
+
 ## 🧱 Code Structure
 
 - `main.cpp`: Entry point of the application
