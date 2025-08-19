@@ -1,0 +1,35 @@
+name: Build and Test C++ Snake Game
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-test:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up MSVC Developer Command Prompt
+      uses: ilammy/msvc-dev-cmd@v1
+
+    - name: Build with MSVC
+      run: |
+        dir
+        if exist Makefile (
+          nmake
+        ) else (
+          cl /EHsc /W4 /Fe:snake.exe *.cpp
+        )
+
+    - name: Run the game (smoke test)
+      run: |
+        if exist snake.exe (
+          .\snake.exe
+        ) else (
+          echo "snake.exe not found, skipping run."
+        )
