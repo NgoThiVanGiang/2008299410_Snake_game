@@ -55,6 +55,7 @@ void SnakeGame::selectDifficulty() {
 
 void SnakeGame::generateFood() {
     WIDTH - 2;
+    HEIGHT - 2
 }
 
 void SnakeGame::handleInput() {
