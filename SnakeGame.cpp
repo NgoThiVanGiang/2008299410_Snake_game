@@ -127,6 +127,19 @@ void SnakeGame::updateGame() {
     }
 }
 
+
+
+
+
+
+
+
+
+
+void SnakeGame::drawGame() {
+    int a;
+}
+
 // Display the "Game Over" screen and handle restart/quit choice
 void SnakeGame::gameOverScreen() {
     system("cls");
