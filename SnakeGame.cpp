@@ -54,7 +54,10 @@ void SnakeGame::selectDifficulty() {
 }
 
 void SnakeGame::generateFood() {
-    WIDTH - 2;
+    do {
+food.x = rand() % (WIDTH - 2) + 1;
+        food.y = rand() % (HEIGHT - 2) + 1;
+    } while (isSnakeBody(food));
 }
 
 void SnakeGame::handleInput() {
