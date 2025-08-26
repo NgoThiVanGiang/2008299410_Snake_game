@@ -27,17 +27,12 @@ A classic Snake game implemented in C++ with modular code structure.
   </a>
 </p>
 
-
 ## 🖼️ Screenshots
 
-### 🟢 Welcome Screen
-![App Screenshot](assets/screenshots/welcome-screen.png)
+| 🟢 Welcome Screen | 🎮 Gameplay Screen | 💀 Gameover Screen |
+|----------------|-----------------|------------------|
+| ![Welcome Screen](https://res.cloudinary.com/dhmnidqyy/image/upload/v1756174018/welcome-screen_xsud4q.png) | ![Gameplay Screen](https://res.cloudinary.com/dhmnidqyy/image/upload/v1756174018/gameplay_gkfeo0.png) | ![Game Over Screen](https://res.cloudinary.com/dhmnidqyy/image/upload/v1756174018/game-over_irfvmi.png) |
 
-### 🎮 Gameplay Screen
-![App Screenshot](assets/screenshots/gameplay.png)
-
-### 💀 Gameover Screen
-![App Screenshot](assets/screenshots/game-over.png)
 
 ## ✨ Features
 
