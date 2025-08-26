@@ -27,6 +27,36 @@ A classic Snake game implemented in C++ with modular code structure.
   </a>
 </p>
 
+## 📖 Introduction
+🐍 Snake Game (C++ Console Edition) 🐍
+
+Welcom to the classic Snake game reinvented in C++, featuring a modular design, colorful console interface, and builtin customization to suit different skill levels.
+This project, created as a final assignment for a Professional Skills course by Group 7, tries to replicate the  nostalgic arcade gameplay on the Windows console. It showcases:
+- Authentic classic Snake mechanics with score tracking and simple yet satisfying gameplay.
+- A modular code structure that cleanly separates implementation logic (SnakeGame.cpp) from declarations (SnakeGame.h) and entry point (main.cpp).
+- A visually engaging interface, complete with welcome, gameplay, and gameover screens rendered in text graphics.
+- Three difficulty modes: Easy, Medium, Hard; players can choose the pace and challenge that suits them.
+- Flexible controls, supporting both arrow keys (↑)(↓)(←)(→) and [W][A][S][D], along with convenient options for replay or exit using [R] (restart) or [Q] (quit) after the game ends.
+- Easy to access, just run SnakeGame.exe and it's ready to play, no installation needed.
+
+## 🎮 How to Play
+Once the game starts, you’ll experience:
+
+- A welcome screen with game title and instructions.
+- Gameplay begins with a snake that moves continuously. Feed it by collecting items, but avoid walls and your own tail—doing so ends the game.
+- Navigate the direction where the snake head to using arrow keys (↑)(↓)(←)(→) or [W][A][S][D] keys for movement.
+- After a “Game Over,” press:
+[R] to restart and try again.
+[Q] to quit the game.
+- The number ber of food your snake ate is your point.
+## 📝 Tips & Strategy
+- Start Slow: if you're new to the game, begin with Easy mode to get casual familiarity with turning and edge behavior.
+- Pick a Comfortable Key Layout: Some players prefer arrow keys; others find WASD more intuitive—choose what feels natural.
+- Mindful Movement: Plan your path early, beware of available space. As the snake grows, maneuvering without colliding gets trickier.
+- Replay and Improve: Each restart offers insight—adjust your strategy to last longer and score higher.
+- Use Difficulty Gradually: Once comfortable, try Medium or Hard to increase speed and challenge.
+
+
 ## 🖼️ Screenshots
 
 | 🟢 Welcome Screen | 🎮 Gameplay Screen | 💀 Gameover Screen |
