@@ -1,0 +1,30 @@
+name: Lint C++ Code
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  lint:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Chocolatey packages
+      run: |
+        choco install llvm cppcheck -y
+
+    - name: Check code formatting with clang-format
+      run: |
+        $ErrorActionPreference = "Continue"
+        Get-ChildItem -Recurse -Include *.cpp,*.h | ForEach-Object {
+          clang-format --dry-run --Werror $_.FullName
+        }
+
+    - name: Run cppcheck static analysis
+      run: |
+        cppcheck --enable=all --inconclusive --std=c++11 --error-exitcode=1 .

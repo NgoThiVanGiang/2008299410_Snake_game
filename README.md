@@ -27,7 +27,6 @@ A classic Snake game implemented in C++ with modular code structure.
   </a>
 </p>
 
-
 ## 📖 Introduction
 🐍 Snake Game (C++ Console Edition) 🐍
 
@@ -58,49 +57,12 @@ Once the game starts, you’ll experience:
 - Use Difficulty Gradually: Once comfortable, try Medium or Hard to increase speed and challenge.
 
 
-## 📖 Giới Thiệu
-🐍 Trò chơi Rắn Săn Mồi (C++ Console Edition) 🐍
-
-Chào mừng bạn đến với phiên bản Rắn săn mồi kinh điển được viết lại bằng C++, với thiết kế module gọn gàng, giao diện console đầy màu sắc và các chế độ tùy chỉnh phù hợp cho nhiều cấp độ người chơi.
-
-Dự án này được thực hiện như một bài tập cuối kỳ trong môn Kỹ năng nghề nghiệp của Nhóm 7, nhằm tái hiện lại cảm giác hoài niệm của game arcade ngay trên màn hình console Windows. Trò chơi có các điểm nổi bật:
-
-- Cơ chế rắn săn mồi chuẩn cổ điển, có tính điểm, lối chơi đơn giản nhưng hấp dẫn.
-- Cấu trúc mã nguồn module rõ ràng, tách biệt phần xử lý (SnakeGame.cpp), khai báo (SnakeGame.h) và điểm bắt đầu (main.cpp).
-- Giao diện trực quan, có màn hình chào mừng, màn chơi và màn hình Game Over bằng đồ họa ký tự.
-- Ba cấp độ khó: Dễ, Trung bình, Khó – người chơi có thể chọn tốc độ và thử thách phù hợp.
-- Điều khiển linh hoạt: hỗ trợ cả phím mũi tên (↑)(↓)(←)(→) và các phím [W][A][S][D]. Sau khi thua, người chơi có thể nhấn R để chơi lại hoặc Q để thoát.
-- Cực kỳ tiện lợi: chỉ cần chạy SnakeGame.exe là chơi ngay, không cần cài đặt.
-
-## 🎮 Cách Chơi
-
-Ngay khi bắt đầu, bạn sẽ thấy:
-
-- Màn hình chào mừng với tên trò chơi và hướng dẫn ngắn gọn.
-- Con rắn di chuyển liên tục. Nhiệm vụ của bạn là điều khiển rắn ăn mồi để dài ra, đồng thời tránh va vào tường và chính cơ thể mình. Nếu chạm chướng ngại, trò chơi kết thúc.
-- Điều khiển hướng đi của đầu rắn bằng phím mũi tên (↑)(↓)(←)(→) hoặc các phím [W][A][S][D].
-- Khi thua, bạn có thể:
-Nhấn [R] để chơi lại.
-Nhấn [Q] để thoát game.
-- Số mồi mà rắn ăn được sẽ là số điểm của của người chơ.
-## 📝 Mẹo & Chiến Thuật
-
-- Bắt đầu chậm rãi: Nếu bạn mới chơi, hãy chọn chế độ Dễ để làm quen với cách rẽ và va chạm.
-- Chọn cách điều khiển thoải mái: Một số người thích  (↑)(↓)(←)(→) , một số khác lại quen với các phím [W][A][S][D] – hãy chọn phù hợp với thói quen của bạn.
-- Di chuyển có tính toán: Lập kế hoạch sớm và chú ý không gian xung quanh. Khi rắn dài ra, việc né tránh trở nên khó khăn hơn.
-- Chơi lại và cải thiện: Mỗi lần chơi lại giúp bạn rút kinh nghiệm, từ đó kéo dài thời gian sống sót và đạt điểm cao hơn.
-- Tăng dần độ khó: Khi đã quen, hãy thử Trung bình hoặc Khó để tăng tốc độ và thử thách.
-
 ## 🖼️ Screenshots
 
-### 🟢 Welcome Screen
-![App Screenshot](assets/screenshots/welcome-screen.png)
+| 🟢 Welcome Screen | 🎮 Gameplay Screen | 💀 Gameover Screen |
+|----------------|-----------------|------------------|
+| ![Welcome Screen](https://res.cloudinary.com/dhmnidqyy/image/upload/v1756174018/welcome-screen_xsud4q.png) | ![Gameplay Screen](https://res.cloudinary.com/dhmnidqyy/image/upload/v1756174018/gameplay_gkfeo0.png) | ![Game Over Screen](https://res.cloudinary.com/dhmnidqyy/image/upload/v1756174018/game-over_irfvmi.png) |
 
-### 🎮 Gameplay Screen
-![App Screenshot](assets/screenshots/gameplay.png)
-
-### 💀 Gameover Screen
-![App Screenshot](assets/screenshots/game-over.png)
 
 ## ✨ Features
 
@@ -115,6 +77,27 @@ Nhấn [Q] để thoát game.
 - **W / A / S / D** → Alternative movement keys  
 - **R** → Restart the game after Game Over  
 - **Q** → Quit the game after Game Over  
+
+## 🚀 Compilation and Running
+
+### 🟦 Method 1: Using the batch file (Windows)
+```bash
+build_and_run.bat
+```
+💡 Tip: Double-click the batch file or run it from the command prompt to compile and launch the game automatically!
+
+### 🟩 Method 2: Manual compilation (Windows)
+```bash
+g++ -Wall -Wextra -std=c++11 main.cpp SnakeGame.cpp -o snake_game.exe
+snake_game.exe
+```
+🔧 Note: This method gives you full control over the compilation process.
+
+### 🟨 Method 3: Using Makefile (if you have make installed)
+```bash
+make ./snake_game.exe
+```
+🛠️ Pro Tip: Using a Makefile can simplify building larger projects with multiple files!
 
 ## 🧱 Code Structure
 
