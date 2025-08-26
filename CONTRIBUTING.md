@@ -59,13 +59,25 @@ git push origin feature/your-feature-name
     -   Explain **what** you changed.
     -   Explain **why** you made the change.
     -   Mention any issues it fixes (e.g., `Fixes #12`).
-### 8. Reporting Bugs & Suggesting Features
+
+### 8. Document Review Process
+
+#### Review Model: Cross-Review
+
+All documents must go through a **cross-review** process. This means that documents are reviewed by peers to ensure completeness, accuracy, and alignment with team standards.
+
+#### Required Reviewer
+- **Username:** `nguyenducy313`
+- `nguyenducy313` must be added as a **required reviewer** for every document.
+
+### 9. Reporting Bugs & Suggesting Features
 If you find a bug or have an idea:
 -   Open a **GitHub Issue**.
 -   Include:
     -   Steps to reproduce (if a bug)
     -   Screenshots or console output (if applicable)
     -   Suggested solution or feature details
+
 
 ## Code of Conduct
 
