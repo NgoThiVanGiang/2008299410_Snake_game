@@ -79,6 +79,7 @@ If you find a bug or have an idea:
     -   Screenshots or console output (if applicable)
     -   Suggested solution or feature details
 
+
 ## Code of Conduct
 
 Please be respectful and constructive in all discussions.  
