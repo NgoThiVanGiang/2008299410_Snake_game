@@ -67,6 +67,7 @@ git push origin feature/your-feature-name
 All documents must go through a **cross-review** process. This means that documents are reviewed by peers to ensure completeness, accuracy, and alignment with team standards.
 
 #### Required Reviewer
+
 - **Username:** `nguyenducy313`
 - `nguyenducy313` must be added as a **required reviewer** for every document.
 
